@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Youtube from 'react-youtube';
 
 const useStyles = makeStyles({
     root: {
@@ -25,34 +26,33 @@ const useStyles = makeStyles({
     },
   });
 
-export default function Home() {
+export default function Projects() {
     const classes = useStyles()
+
+    const opts = {
+        height: '390',
+        width: '640',
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 0,
+        },
+      }
+    
+    const videoOnReady = (event) => {
+        event.target.pauseVideo()
+    }
+    
     return (
         <Grid container spacing={0} direction="column" alignItems="center" style={{ minHeight: '100vh' }}>   
             <Grid item>
                 <Card className={classes.root} style={{backgroundColor:"grey"}}>
                     <CardContent>
-                    {/* <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Word of the Day
-                    </Typography> */}
-                    <Typography variant="h3" component="h1" align="center">
-                    Blake Woodruff
-                    </Typography>
-                    {/* <Typography className={classes.pos} color="textSecondary">
-                    adjective
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                    </Typography> */}
+                        <Youtube videoId="52HgsMW0BbM" opts={opts} onReady={videoOnReady}/>
                     </CardContent>
-                    {/* <CardActions>
-                    <Button size="small">Learn More</Button>
-                    </CardActions> */}
                 </Card>
             </Grid>      
         </Grid>
     )
-    
 }
+
+// https://youtu.be/52HgsMW0BbM

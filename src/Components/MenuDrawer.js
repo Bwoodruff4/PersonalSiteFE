@@ -42,7 +42,7 @@ export default function TemporaryDrawer() {
     >
       <List>
           <ListItemLink primary={"Home"}to={"/"}/>
-        {['Background', 'Experience', 'Projects'].map((text) => (
+        {['Background', 'Experience', 'Projects', 'Reading List'].map((text) => (
           <ListItemLink primary={`${text}`}to={`/${text}`}/>
         ))}
       </List>

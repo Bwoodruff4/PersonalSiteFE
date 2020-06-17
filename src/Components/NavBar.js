@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 // import Typography from '@material-ui/core/Typography';
 // import Button from '@material-ui/core/Button';
 import MenuDrawer from './MenuDrawer'
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles((theme) => ({
   root: {
