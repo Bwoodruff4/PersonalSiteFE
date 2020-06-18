@@ -12,11 +12,6 @@ const useStyles = makeStyles({
     root: {
       minWidth: 500,
     },
-    bullet: {
-      display: 'inline-block',
-      margin: '0 2px',
-      transform: 'scale(0.8)',
-    },
     title: {
       fontSize: 14,
     },
@@ -28,28 +23,20 @@ const useStyles = makeStyles({
 export default function Home() {
     const classes = useStyles()
     return (
-        <Grid container spacing={0} direction="column" alignItems="center" style={{ minHeight: '100vh' }}>   
+        <Grid container spacing={1} direction="column" alignItems="center" style={{ minHeight: '100vh' }}>   
             <Grid item>
                 <Card className={classes.root} style={{backgroundColor:"grey"}}>
                     <CardContent>
-                    {/* <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Word of the Day
-                    </Typography> */}
-                    <Typography variant="h3" component="h1" align="center">
-                    Blake Woodruff
-                    </Typography>
-                    {/* <Typography className={classes.pos} color="textSecondary">
-                    adjective
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                    </Typography> */}
+                        <Typography variant="h2" component="h1" align="center" style={{color:"white"}}>
+                        Blake Woodruff
+                        </Typography>
+                        <Typography variant="h3" component="h1" align="center" style={{color:"white", fontStyle:"italic"}}>
+                        Engineer
+                        </Typography>
+                        <Typography variant="h5" component="h1" align="center" style={{color:"white", fontStyle:"italic"}}>
+                        Good at logic, terrible at styling
+                        </Typography>
                     </CardContent>
-                    {/* <CardActions>
-                    <Button size="small">Learn More</Button>
-                    </CardActions> */}
                 </Card>
             </Grid>      
         </Grid>
